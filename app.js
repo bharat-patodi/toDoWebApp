@@ -38,7 +38,7 @@ function addEntry(e) {
 
         checkState();
         // If chore is not empty, append the new entry above the old ones
-        const newEntryTemplate = "<li class = \"allEntries\"><input type=\"checkbox\"><span>" + newEntry + "</span></input></li>";
+        const newEntryTemplate = "<li class = \"allEntries\"><input type=\"checkbox\"><span>" + newEntry + "</span></input><span class = \"delete-single-chore\" onclick = \" this.parentNode.style.display = 'none' \">&times;</span></li>";
 
         allEntries.innerHTML = newEntryTemplate + previousEntries;
 
@@ -55,7 +55,7 @@ function addEntry(e) {
     }
     // If chore is empty, intimate the user
     else {
-        alert("Please enter a valid entry.");
+        alert("You have not entered anything.");
     }
 }
 
@@ -68,7 +68,8 @@ Storing the attribute values of the checkboxes
 function checkState() {
     for (var j = 0; j < entryList.length; j++) {
         checkedAttribs[j] = entryList[j].checked;
-        console.log(entryList[j].checked + "" + j + "940989");
+        // Verify the checked values with a console statement
+        // console.log(entryList[j].checked + "" + j);
     }
     localStorage.setItem('checkboxStatuses', JSON.stringify(checkedAttribs));
 }
@@ -93,7 +94,10 @@ Removing a single entry - use e.target Also read up event bubbling for making th
 -------------------------------------------------
 */
 
-
+function removeOne(eve) {
+    console.log(eve.target);
+    console.log(eve.currentTarget);
+}
 
 /*
 -------------------------------------------------
@@ -121,13 +125,14 @@ function showRemoveBtn() {
 /*
 -------------------------------------------------
 (a) Add the checkbox statuses at page reloads and remove alls.
-(c) RWD
-(d) Styling
+(b) Remove single items
 (e) Reordering the list items
 (f) Edit the items
-(g) Bug: The topmost item that's ticked loses its state with page reload
 (h) Filter
 (i) Sort
 (j) The checked one should go down
+(c) Done - RWD
+(d) Done - Styling
+(g) Done - Bug: The topmost item that's ticked loses its state with page reload
 -------------------------------------------------
 */
