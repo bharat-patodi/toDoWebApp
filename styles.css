@@ -44,35 +44,9 @@ Color Variables
 --------------------------------------------------------------- */
 
 :root {
-  --Mustard: #ffc600;
   --Navy: #001f3f;
-  --Blue: #0074D9;
-  --Aqua: #7FDBFF;
-  --Teal: #39CCCC;
-  --Olive: #3D9970;
-  --Green: #2ECC40;
-  --Lime-Green: #01FF70;
-  --Yellow: #FFDC00;
-  --Orange: #FF851B;
   --Red: #FF4136;
-  --Maroon: #85144B;
-  --Fuchsia: #F012BE;
-  --Purple: #B10DC9;
-  --Black: #111111;
-  --Grey: #AAAAAA;
-  --Concrete: #95a5a6;
-  --Asbestos: #7f8c8d;
-  --Silver: #DDDDDD;
-  --CloudWhite: #ecf0f1;
-  --SunFlower: #f1c40f;
-  --Alizarin: #e74c3c;
-  --Pomegranate: #c0392b;
-  --PeterRiver: #3498db;
-  --BelizeHole: #2980b9;
-  --MidnightBlue: #2c3e50;
-  --WetAsphalt: #34495e;
-  --Amethyst: #9b59b6;
-  --Wisteria: #8e44ad;
+  --Aqua: #7FDBFF;
 }
 
 body {
@@ -123,10 +97,13 @@ input[type=checkbox]:checked+span {
   cursor: default;
   margin-left: 10px;
   color: var(--Red);
-  border-radius: 50%;;
 }
 
 #removeBtn {
+  display: none;
+}
+
+.hide {
   display: none;
 }
 
