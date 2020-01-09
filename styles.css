@@ -69,6 +69,11 @@ body {
 form {
 }
 
+#chore {
+  padding: 10px;
+  border: none;
+}
+
 ul {
   display: flex;
   flex-direction: column;
@@ -77,17 +82,26 @@ ul {
 }
 
 ul li {
-  border: 1px solid var(--Navy);
+  /* border: 1px solid var(--Navy); */
   margin-bottom: 0.5em;
   margin-top: 0.5em;
   padding: 0.5em;
 }
 
-input[type=checkbox] {}
+input[type=checkbox] input {
+  /* margin-left: 200px; */
+}
 
 input[type=checkbox]:checked+span {
   filter: opacity(40%);
   text-decoration: line-through;
+}
+
+input[type=button], input[type=submit] {
+  background-color: var(--Navy);
+  border: none;
+  color: white;
+  padding: 10px;
 }
 
 .delete-single-chore {
