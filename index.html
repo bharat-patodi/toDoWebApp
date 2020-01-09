@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" type="text/css" href = "src/styles/styles.css">
-        <!-- Didn't find Ostrich sans and so have included Oswald. Should be replaced with Ostrich in next version. -->
+        <!-- Didn't find Ostrich sans and so have included Oswald. Should be replaced with Ostrich in next version. Also use some FA -->
+        <!-- <script src="https://kit.fontawesome.com/c026ea017c.js" crossorigin="anonymous"></script> -->
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-
         <title>To Do Webapp</title>
     </head>
     <body>
@@ -15,7 +15,7 @@
             <!--  Using onsubmit instead of onclick to acknowledge the Enter key too -->
             <form onsubmit="addEntry(event)">
                 <input id="chore" type="text" placeholder="chores..."></input>
-                <input type="submit" value="Add"></input>
+                <input id = "choreAddBtn" type="submit" value="Add"></input>
             </form>
             <ul id="entries" onclick="checkState()">
             </ul>

@@ -60,6 +60,10 @@ function addEntry(e) {
     // If chore is empty, intimate the user
     else {
         alert("You have not entered anything.");
+        // This won't work because document.body.style can only access inline css values.
+        // document.body.style.backgroundColor =  #ff0000;
+        // Even the following is not working for some reason. Let's find out later.
+        // window.getComputedStyle(document.body, null).backgroundColor = #ff0000;
     }
 }
 
@@ -141,6 +145,7 @@ function showRemoveBtn() {
 (h) Filter
 (i) Sort
 (j) RemoveAll button get shown when there are hidden elements
+(k) Make sexy styling using font awesome and other stuff.
 
 (a) Done - Add the checkbox statuses at page reloads and remove alls.
 (j) The checked one should go down

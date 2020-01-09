@@ -60,6 +60,7 @@ body {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding: 0 5px;
 }
 
 .wrapper>* {
@@ -104,6 +105,9 @@ input[type=button], input[type=submit] {
   padding: 10px;
 }
 
+#choreAddBtn {
+}
+
 .delete-single-chore {
   display:inline-block;
   font-size: 1.5em;
@@ -119,5 +123,12 @@ input[type=button], input[type=submit] {
 
 
 /* ---------------------------------------------------------------
-Media Queries - Don't think we'll need them... Flexbox has got everything covered.
+Media Queries
 --------------------------------------------------------------- */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #choreAddBtn {
+    margin-left: 30px;
+  }
+}
