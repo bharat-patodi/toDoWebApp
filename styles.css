@@ -117,9 +117,6 @@ input[type=button], input[type=submit] {
   display: none;
 }
 
-.hide {
-  display: none;
-}
 
 /* ---------------------------------------------------------------
 Media Queries - Don't think we'll need them... Flexbox has got everything covered.

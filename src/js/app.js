@@ -104,6 +104,7 @@ Removing a single entry - use e.target Also read up event bubbling for making th
 */
 
 function removeOne(event) {
+    // Using this method instead of the removeChild method because of the ease of data persistence. I am sure I could do persistence with removeChild too, but the solution hasn't yet presented itself to me.
     const thisChore = event.target.parentNode;
     thisChore.style.display = 'none';
     // event.target.parentNode.classList.toggle("hide");
@@ -135,13 +136,15 @@ function showRemoveBtn() {
 
 /*
 -------------------------------------------------
-(a) Add the checkbox statuses at page reloads and remove alls.
-(b) On reload, the state of the removed chores gets reset.
 (e) Reordering the list items
 (f) Edit the items
 (h) Filter
 (i) Sort
+(j) RemoveAll button get shown when there are hidden elements
+
+(a) Done - Add the checkbox statuses at page reloads and remove alls.
 (j) The checked one should go down
+(b) Done - On reload, the state of the removed chores gets reset.
 (b) Done - Remove single items
 (c) Done - RWD
 (d) Done - Styling
